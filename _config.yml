@@ -1,4 +1,3 @@
-	name: Hamza Oukaddi
-	markdown: kramdown
-
-  permalink: /blog/:year/:month/:day/:title
+name: Hamza Oukaddi
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
