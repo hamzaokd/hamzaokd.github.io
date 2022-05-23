@@ -1,0 +1,8 @@
+---
+layout: post
+title: "My site launched"
+date: 2014-04-30
+---
+
+I just launched my site! I'm so excited!
+This is where I'll put my profile, my repos, and my blog. 
