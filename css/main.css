@@ -1,3 +1,8 @@
+* {
+    font-family: 'Nunito', sans-serif !important;
+    /* font-size: small; */
+}
+
 body {
     margin: 60px auto;
     width: 70%;
@@ -27,6 +32,7 @@ p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
+    font-family: 'Work Sans', sans-serif;
 }
 footer {
     border-top: 1px solid #d5d5d5;
@@ -40,4 +46,41 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+section{
+    border-color: #333;
+    border-style:solid;
+    border-radius: 5%;
+    padding-left: 5%;
+}
+
+.row {
+    display: flex;
+  }
+  
+.main {
+width: 75%;
+margin-left: 10%;
+}
+.sidebar{
+    width:25%;
+    position:relative;
+}
+
+.vertical {
+    border-left: 3px solid black;
+    height: 80%;
+    position:absolute;
+    display:flex;
+    left:35%;
+    
+}
+.skills > li{
+    list-style: outside;
+    margin-bottom: 2px;
+    padding-top: 0%;
+}
+post{
+    font-family: 'Work Sans', sans-serif;
 }
