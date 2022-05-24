@@ -5,7 +5,7 @@ title: "Offside detection"
 ---
 
 
-[Detection of offsides in football]({{url_for('index')}})
+[Detection of offsides in football](https://github.com/hamzaokd/Offside_detection)
 =========================================================
 
 
@@ -93,8 +93,4 @@ After all these steps, this gonna be the easiest one, we will just compare the '
 
 To learn more about the offside rules, you can check [this](https://en.wikipedia.org/wiki/Offside_(association_football)).
 
-Contact
--------
-I would really like to hear from you, if you have any questions or suggestions.
 
-[mail](mailto:hamzaokd1@gmail.com)
