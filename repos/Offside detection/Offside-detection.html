@@ -1,13 +1,29 @@
 ---
-layout: post
+layout: index
 title: "Offside detection"
 
 ---
-<hr>
-<h1>Detection of offsides in football</h1>
-<a href="https://github.com/hamzaokd/Offside_detection" style="">View in github</a>
+<div id="main">
+
+<article class="post">
+<header>
+    <div class="title" id="title">
+        <h2><a href="#">Detection of offsides in football</a></h2>
+        <p><a href="https://github.com/hamzaokd/Offside_detection" style="">View in github</a></p>
+    </div>
+    <div class="meta" hidden>
+        <time class="published" datetime="2015-11-01">November 1, 2015</time>
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+    </div>
+    
+</header>
+
+
+
+
+
 <div style="font-size:small;">
-<p><em>Personal project still in developemnt, still working on pages layout and functionalities.</em></p>
+<p><em>.</em></p>
 <p><em>Languages and libraries used:</em>
 <em>-Python
 -Flask
@@ -20,20 +36,19 @@ title: "Offside detection"
 <p>Here is an example of an input image:</p>
 <p><img src="https://github.com/hamzaokd/Offside_detection/blob/main/media/rep/football.jpg?raw=true" alt="football match" height="300px"/> </p>
 <p>For the moment, after the detection we get this:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Detected players</th>
-<th style="text-align:center">Positions on the field</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><img src="https://github.com/hamzaokd/Offside_detection/blob/main/media/rep/user_image_detected.jpg?raw=true" alt="Detected players" height="300px"/></td>
-<td style="text-align:center"><img src="https://github.com/hamzaokd/Offside_detection/blob/main/media/rep/field_with_players.jpg?raw=true" alt="Detected players" height="300px"/> </td>
-</tr>
-</tbody>
-</table>
+
+
+<figure>
+    <img src="https://github.com/hamzaokd/Offside_detection/blob/main/media/rep/user_image_detected.jpg?raw=true" alt="detected players" height="400px"  style="padding-bottom:0.5em;" />
+    <figcaption style=" text-align:center;font-weight: bold"> Detected players</figcaption>
+</figure>
+<figure>
+    <img src="https://github.com/hamzaokd/Offside_detection/blob/main/media/rep/field_with_players.jpg?raw=true" height="400px" alt="positions on the field"  style="padding-bottom:0.5em;" />
+    <figcaption style=" text-align:center;font-weight: bold;"> Positions on the field</figcaption>
+</figure>
+
+
+
 <h2 id="how-to-use">How to use</h2>
 <ol>
 <li>Download the repository</li>
@@ -69,3 +84,24 @@ title: "Offside detection"
 <h2 id="check-for-offside">Check for offside</h2>
 <p>After all these steps, this gonna be the easiest one, we will just compare the <em>minimum</em> x coordinate of each team. For now, I will not study the edges cases, like goalkeeper before last defender, or ball in other center of half of the field.</p>
 <p>To learn more about the offside rules, you can check <a href="https://en.wikipedia.org/wiki/Offside_(association_football)" target="_blank">this</a>.</p>
+</article>
+</div>  
+
+
+<section id="sidebar" style="  position: -webkit-sticky;position: sticky;top: 0;">
+    <section>
+        <ul>
+            <li><a href=#title>DETECTION OF OFFSIDES IN FOOTBALL</a></li>
+            <li><a href=#how-to-use>How to use</a></li>
+            <li><a href=#goal>Goal</a></li>
+            <li><a href=#type-of-photos-i-will-be-working-on>Type of photos I will be working on</a></li>
+            <li><a href=#calibration-of-the-camera>Calibration of the camera</a></li>
+            <li><a href=#get-position-of-the-player>Get position of the player</a></li>
+            <li><a href=#identification-of-the-players-teams>Identification of the players teams</a></li>
+            <li><a href=#ball-position>Ball position</a></li>
+            <li><a href=#check-for-offside>Check for offside</a></li>
+        </ul>
+    </section>
+
+
+
