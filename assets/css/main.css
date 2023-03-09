@@ -3609,3 +3609,40 @@ input, select, textarea {
 			}
 
 		}
+
+
+		#sliding_content{
+			list-style: none;
+		}
+		.title_slide {
+		cursor: pointer;
+		font-weight: bold;
+		padding: 10px;
+		font-size: 1.2em;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 5px;
+	}
+
+	.title_slide:hover {
+		background-color: #2ebaae
+
+	}
+		.content_slide {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.5s ease-out;
+			}
+			
+
+.logo_container {
+	display: flex;
+	align-items: center;
+	}
+	
+.logo_container img {
+margin-right: 10px;
+margin-left: auto;
+width: 250px; /* adjust the width as needed */
+/* height: 100px; adjust the height as needed */
+}
+

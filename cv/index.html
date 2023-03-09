@@ -4,10 +4,40 @@ title: Hamza Oukaddi
 ---
     		<div id="main">
 				<h1 style="text-align:center;">CV</h1>
+
+				<ul id="sliding_content">
+					<li class="title_slide">Français</li>
+					<li class="content_slide"><iframe src="CV_Hamza_Oukaddi_FR.pdf" width="100%" height="1000" type='application/pdf' ></iframe></li>
+					<li class="title_slide">English</li>
+					<li class="content_slide"><iframe src="CV_Hamza_Oukaddi_EN.pdf" width="100%" height="1000" type='application/pdf' ></iframe></li>
+				</ul>
 				
 				<!-- <embed src="Hamza_Oukaddi%20CV.pdf" width="100%" height="400%" type='application/pdf' > -->
 				<!-- <a href="https://github.com/hamzaokd/hamzaokd.github.io/blob/main/cv/Hamza_Oukaddi%20CV.pdf" >cv</iframe> -->
-                    <iframe src="Hamza_Oukaddi%20CV.pdf" width="100%" height="1000" type='application/pdf' ></iframe>
+                    
             </div><!-- /.blurb -->
+
+
+			<script>
+// Get all the title elements
+					const titles = document.querySelectorAll('.title_slide');
+
+					// Add a click event listener to each title
+					titles.forEach(title => {
+					title.addEventListener('click', () => {
+						// Get the next element sibling of the clicked title
+						const content = title.nextElementSibling;
+
+						// Toggle the max-height of the content
+						if (content.style.maxHeight) {
+						content.style.maxHeight = null;
+						} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+						}
+					});
+					});
+
+
+				</script>
 
 
