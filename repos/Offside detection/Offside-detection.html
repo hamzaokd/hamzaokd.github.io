@@ -9,7 +9,7 @@ title: "Offside detection"
 <header>
     <div class="title" id="title">
         <h2><a href="#">Detection of offsides in football</a></h2>
-        <p><a href="https://github.com/hamzaokd/Offside_detection" style="">View in github</a></p>
+        <!-- <p><a href="https://github.com/hamzaokd/Offside_detection" style="">View in github</a></p> -->
     </div>
     <div class="meta" hidden>
         <time class="published" datetime="2015-11-01">November 1, 2015</time>
@@ -25,23 +25,21 @@ title: "Offside detection"
 <div style="font-size:small;">
 <p><em>.</em></p>
 <p><em>Languages and libraries used:</em>
-<em>-Python
--Flask
--OpenCV
--Eventually some scikit-learn
--HTML,CSS and some JavaScript</em></p>
+<em>-Python -OpenCV -scikit-learn -Flask -HTML,CSS and JavaScript.</em></p>
 </div>
 <hr>
 <p><strong>This little project will detect offsides in an image input by the user</strong></p>
 <p>Here is an example of an input image:</p>
 <p><img src="https://github.com/hamzaokd/Offside_detection/blob/main/media/rep/football.jpg?raw=true" alt="football match" height="300px"/> </p>
-<p>For the moment, after the detection we get this:</p>
+<p>For the moment, after the detection we get the detected players on the image:</p>
 
 
 <figure>
     <img src="https://github.com/hamzaokd/Offside_detection/blob/main/media/rep/user_image_detected.jpg?raw=true" alt="detected players" height="400px"  style="padding-bottom:0.5em;" />
     <figcaption style=" text-align:center;font-weight: bold"> Detected players</figcaption>
 </figure>
+
+After removing players that are not on the field (managers, referees, etc...), we get this birs eye view of the field with the players positions, and the lines that represent the offside positions in both sides:
 <figure>
     <img src="https://github.com/hamzaokd/Offside_detection/blob/main/media/rep/field_with_players.jpg?raw=true" height="400px" alt="positions on the field"  style="padding-bottom:0.5em;" />
     <figcaption style=" text-align:center;font-weight: bold;"> Positions on the field</figcaption>
@@ -49,13 +47,14 @@ title: "Offside detection"
 
 
 
-<h2 id="how-to-use">How to use</h2>
+<!-- <h2 id="how-to-use">How to use</h2>
 <ol>
 <li>Download the repository</li>
 <li>Download the weight file, this is essential for the program to work <a href="https://pjreddie.com/media/files/yolov3.weights">link here</a>. It&#39;s from the famous <a href="https://pjreddie.com/darknet/yolo/">YOLO project</a>.</li>
 <li>Run the command file <code>run.cmd</code> and open the browser.</li>
 <li>Further instructions on the web page when launching the program</li>
-</ol>
+</ol> -->
+<br>
 <h2 id="goal">Goal</h2>
 <p>My idea is to work on a still image of a TV broadcast of a football match following these steps:</p>
 <ul>
@@ -66,16 +65,18 @@ title: "Offside detection"
 </ul>
 <p>I will discuss each step separately</p>
 <h2 id="type-of-photos-i-will-be-working-on">Type of photos I will be working on</h2>
-<p><del>For now, I will be working on a single frame, possibly <a href="https://github.com/hamzaokd/Offside_detection/blob/main/media/goal.jpg?raw=true">this</a>. I choose this picture because i already know the dimensions of the field, so the work will be easier</del></p>
-<p><del>I&#39;m planing to make my program work on pictures but the problem is I will have to calibrate the camera each time, given that I know the field dimensions.</del></p>
-<p>The user can now input any picture he wants.</p>
+<!-- <p><del>For now, I will be working on a single frame, possibly <a href="https://github.com/hamzaokd/Offside_detection/blob/main/media/goal.jpg?raw=true">this</a>. I choose this picture because i already know the dimensions of the field, so the work will be easier</del></p>
+<p><del>I&#39;m planing to make my program work on pictures but the problem is I will have to calibrate the camera each time, given that I know the field dimensions.</del></p> -->
+<p>The input images should be a single frame from a footbal game broadcast (<a href="/repos/Offside detection/Barca-broadcast-Mission.jpg" target="_blank">Like this</a>). The bigger the field of view the more accurate the detection will be.</p>
+<p>One of the features that can be added is possibility of using a video, as such that the offside lines will be drawn in real time</p>
 <h2 id="calibration-of-the-camera">Calibration of the camera</h2>
-<p>On a single frame, this step is quite easy, I'll be using some OpenCV functions to detect the corners and goal, to get the intrinsic coordinates of the camera. This will allow me to get the positions of a player in the real world from the position of it&#39;s corresponding pixel.</p>
+<p>On a single frame, this step is quite easy, the user will need to click on 4 points on the field in the input image, and then click on the corresponding points in a <a href="/repos/Offside detection/field.jpg" target="_blank">field map</a>. The program will then calculate the homography matrix, which will be used to get the 3d world coordinates of the players.</p>
 <h2 id="get-position-of-the-player">Get position of the player</h2>
 <p>Usually, players have at least one foot on the ground, So, their positions on the field is the postion of the feet. There are 2 ways to get the position of a player:</p>
 <ol>
-<li>Manually click the feets of all the players (manual, not intersting)</li>
+<li>Manually click the feets of all the players</li>
 <li>Automatically getting the feet positions(what I wanted to achieve but a bit tricky)</li>
+After using OpenCV functions, and a trained machine learning model, I&#39;ve got the positions of the players.
 </ol>
 <h2 id="identification-of-the-players-teams">Identification of the players teams</h2>
 <p>This is the hardest step. I was thinking about some sort of clustering, then classification. But What if the user had the possibility to pick the color of each team jersey and we then get some algorithm to get the players. Or maybe just enter it manually. I&#39;m not sure about the latter one. I can also look for some sort of deep learning model to get this step right.but it&#39;s gonna be the hardest way.</p>
@@ -92,7 +93,7 @@ title: "Offside detection"
     <section>
         <ul>
             <li><a href=#title>DETECTION OF OFFSIDES IN FOOTBALL</a></li>
-            <li><a href=#how-to-use>How to use</a></li>
+            <!-- <li><a href=#how-to-use>How to use</a></li> -->
             <li><a href=#goal>Goal</a></li>
             <li><a href=#type-of-photos-i-will-be-working-on>Type of photos I will be working on</a></li>
             <li><a href=#calibration-of-the-camera>Calibration of the camera</a></li>

@@ -8,8 +8,8 @@ title: Hamza Oukaddi
     <article class="post">
         <header>
             <div class="title" id="title">
-                <h2><a href="https://github.com/hamzaokd/LiTS">Tumor detection in medical imaging using neural networks</a></h2>
-                <p><a href="https://github.com/hamzaokd/LiTS" style="">View in github</a></p>
+                <h2>Tumor detection in medical imaging using neural networks</h2>
+                <!-- <p><a href="https://github.com/hamzaokd/LiTS" style="">View in github</a></p> -->
             </div>
             <div class="meta" hidden>
                 <time class="published" datetime="2015-11-01">November 1, 2015</time>
@@ -22,30 +22,38 @@ title: Hamza Oukaddi
 <h2 id="introduction">Introduction</h2>
 <p>In the field of medical imaging, the preprocessing of radiographic images is essential in order to effectively detect cancerous tumours. It also involves locating these tumors and estimating their sizes. In this way, doctors can use this information to diagnose the disease but also monitor the progress of treatment.</p>
 <p>In this project, we will seek to detect cancerous tumors in the liver. We will use open access data that have been annotated by experts (radiologists and oncologists): the tumors are therefore known and localized. The figure below gives an idea of ​​the images that will be used.</p>
-<p><img src="https://github.com/hamzaokd/LiTS/blob/main/media/intro.png?raw=true" alt="Original-Mask"></p>
+<p><img src="/repos/LiTS/lits.png" alt="Original-Mask"></p>
 <h2 id="database">Database</h2>
 <p>The database contains 131 original X-ray images and their corresponding mask images, or 232 images in total, in NII format.
 The database can be found in the following links <a href="https://www.kaggle.com/andrewmvd/liver-tumor-segmentation">part1</a> and <a href="https://www.kaggle.com/andrewmvd/liver-tumor-segmentation-part-2">part2</a>.</p>
 <h2 id="study-of-tumors">Study of tumors</h2>
 <p>We will gather the 232 images in a dataframe containing for each of the 131 original images its source file, its name, the source file of its &quot;mask&quot; image and the name of the latter.</p>
 <p>After studying the nii images, we managed to understand our data. Indeed, these are 3D images of dimensions 512 x 512 x n, with n changing from one image to another.</p>
-<p>We add two columns to the dataframe: one that shows whether the image contains a tumor or not and the other displays its percentage.
-<img src="https://github.com/hamzaokd/LiTS/blob/main/media/database.PNG?raw=true" alt="dataframe" width="700px"></p>
+<p>We add two columns to the dataframe: one that shows whether the image contains a tumor or not and the other displays its percentage.</p>
+<br>
+<img src="/repos/LiTS/database.png" alt="dataframe" width="700px">
 <h2 id="image-conversion">Image conversion</h2>
 <p>We chose to use the U-Net neural network, a network designed and applied for the first time in 2015 by Oral Ronneberger for the segmentation of medical images.</p>
 <p>In addition to having the correct format for U-Net, having jpg or png images will be very useful since our database is very large (49.9 GB), so the manipulation of x-ray images in the NII format takes a lot of time and memory. With this in mind, we are going to transform the 3D images from NII format into 2D images of regular formats: <strong>a 3D image of dimensions 512x512x n will be transformed into n images 512x512.</strong></p>
 <p>The original images will be transformed into images in jpg format after having preprocessed them thanks to the functions of the fastai library. As for the &quot;mask&quot; images, we will use the png format. This choice is due to the fact that the &quot;labels&quot; 1,2 and 3 contained in an NII &quot;mask&quot; image are lost if this image is transformed into a jpg image, unlike the png format which retains the &quot;labels&quot; well.</p>
 <p>After preprocessing we obtain images of the form:
-<img src="https://github.com/hamzaokd/LiTS/blob/main/media/output.png?raw=true" alt="output"></p>
+<img src="/repos/LiTS/output.png" alt="output"></p>
+<ul>
+    <li>The first column is the processed image</li>
+    <li>The second column is the the mask image</li>
+    <li>The third column is the predicted mask of the image</li>
+</ul>
 <h2 id="implementing-u-net">Implementing U-Net</h2>
 <p>The implementation, training and prediction part is detailed in the report of another team</p>
 <ul>
 <li>After training the images, we obtain the following predicted images</li>
 </ul>
-<h2 id="report">Report</h2>
+<p><img src="/repos/LiTS/res_train.png" alt="predicted"></p>
+The model wasn't accurate enough beacause of the limited computer performance as we had no powerful GPU.
+<!-- <h2 id="report">Report</h2>
 <p>Our report can be found in <a href="https://github.com/hamzaokd/LiTS/blob/main/Rapport_LOUTAOUI_OUKADDI.pdf?raw=true">here</a></p>
 <hr>
-<p>
+<p> -->
 
     </article>
 </div>
@@ -59,6 +67,5 @@ The database can be found in the following links <a href="https://www.kaggle.com
             <li><a href=#study-of-tumors>Study of tumors</a></li>
             <li><a href=#image-conversion>Image conversion</a></li>
             <li><a href=#implementing-u-net>Implementing U-Net</a></li>
-            <li><a href=#report>Report</a></li>
         </ul>
     </section>
