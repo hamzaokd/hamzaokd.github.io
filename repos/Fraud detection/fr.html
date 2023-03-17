@@ -1,255 +1,308 @@
 ---
 layout: index
 title: "Fraud detection"
-
 ---
 
 <div id="main">
 
     <article class="post">
-    <header>
-        <div class="title" id="title">
-            <h2><a href="#">Fraud detection</a></h2>
+        <header>
+            <div class="title" id="title">
+                <h2><a href="#">Fraud detection</a></h2>
+            </div>
+            <div class="meta" hidden>
+                <time class="published" datetime="2015-11-01">November 1, 2015</time>
+                <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+            </div>
+
+        </header>
+
+
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-InputPrompt jp-InputArea-prompt">
+            </div>
+            <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+
+            </div>
         </div>
-        <div class="meta" hidden>
-            <time class="published" datetime="2015-11-01">November 1, 2015</time>
-            <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-InputPrompt jp-InputArea-prompt">
+            </div>
+            <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+                <h1 style="text-align:center;">Détection de fraudes dans les cartes bancaires</h1>
+            </div>
+
         </div>
-        
-    </header>
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-InputPrompt jp-InputArea-prompt">
+            </div>
+            <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+                <h1 id="Problematique:">Problematique:<a class="anchor-link" href="#Problematique:">&#182;</a></h1>
+                <p>L'objectif de ce projet est la classification desequilibree des donnees,
+                    Ce déséquilibre de classe augmente nettement la difficulté de l’apprentissage par l’algorithme de
+                    classification. En effet, l’algorithme n’a que peu d’exemples de la classe minoritaire sur lesquels
+                    apprendre. Il est donc biaisé vers la population des négatifs et produit des prédictions
+                    potentiellement moins robustes qu’en l’absence de déséquilibre.</p>
 
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 style="text-align:center;">Détection de fraudes dans les cartes bancaires</h1>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Problematique:">Problematique:<a class="anchor-link" href="#Problematique:">&#182;</a></h1><p>L'objectif de ce projet est la classification desequilibree des donnees,
-Ce déséquilibre de classe augmente nettement la difficulté de l’apprentissage par l’algorithme de classification. En effet, l’algorithme n’a que peu d’exemples de la classe minoritaire sur lesquels apprendre. Il est donc biaisé vers la population des négatifs et produit des prédictions potentiellement moins robustes qu’en l’absence de déséquilibre.</p>
-
-</div>
-</div>
-
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>On commence d'abord par faire une bref description de notre base de données, celle ci est constitué  284807 transactions bancaires.</p>
-<p>Il y a dans cette base de données 31 variables dont 28 provenant d’une transformation PCA (analyse en composantes principales) car malheureusement les caractéristiques premières contiennent des données confidentielles qui ne peuvent pas être fournies. Ces variables sont les colonnes V1, V2, ..., jusqu’à V28. Ces données sont par exemple le numéro de compte, les adresses de domicile, les dates d’expiration de cartes bleues, etc, ...</p>
-<p>Les seules données qui n’ont pas été transformées sont les colonnes <code>Time</code>, <code>Amount</code> et <code>Class</code>:</p>
-<ul>
-<li><p><code>Time</code> contient le temps écoulé entre chaque transaction et la première transaction de la base de données.</p>
-</li>
-<li><p><code>Amount</code> quant à lui contient les montants des transactions et cette caractéristique peut être utile pour reconnaître la sensibilité et l’importance des coûts des transactions.</p>
-</li>
-<li><p><code>Class</code> est la dernière variable qui vaut 1 si la transaction est une fraude et 0 sinon.</p>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+            </div>
+        </div>
 
 
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-InputPrompt jp-InputArea-prompt">
+            </div>
+        </div>
+        <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;Occurence des fraudes&#34;
+
+        </div>
+        <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+
+            <div class="jp-Cell-outputWrapper">
+
+
+                <div class="jp-OutputArea jp-Cell-outputArea">
+
+                    <div class="jp-OutputArea-child">
+
+
+                        <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+                        <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+                            <pre>[1] &#34;Occurence des fraudes&#34;
 </pre>
-</div>
-</div>
+                        </div>
+                    </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+                    <div class="jp-OutputArea-child">
 
 
+                        <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>
+
+
+                        <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+                            <pre>
      0      1 
 284315    492 </pre>
-</div>
+                        </div>
 
-</div>
+                    </div>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Analyse-statistique-des-donn%C3%A9es">Analyse statistique des donn&#233;es<a class="anchor-link" href="#Analyse-statistique-des-donn%C3%A9es">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+        </div>
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-InputPrompt jp-InputArea-prompt">
+            </div>
+            <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+                <h2 id="Analyse-statistique-des-donn%C3%A9es">Analyse statistique des donn&#233;es<a class="anchor-link"
+                        href="#Analyse-statistique-des-donn%C3%A9es">&#182;</a></h2>
+            </div>
+        </div>
+        <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+            <div class="jp-Cell-outputWrapper">
 
 
+                <div class="jp-OutputArea jp-Cell-outputArea">
+
+                    <div class="jp-OutputArea-child">
 
 
-
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Dans notre cas, la classification déséquilibrée est un problème de classification dans lequel une classe est sous-représentée par rapport aux autres. Le cas classique est un problème à deux classes, une majoritaire à 99% et une minoritaire à 1%.</p>
-
-</div>
-</div>
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div>
-</div>
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+                        <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
 
 
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>La matrice de corrélation nous montre que la corrélation entre les variables V1 à V28 est très négligeable, ce qui est prévisible puisque ces variables proviennent d’une PCA et donc les composantes doivent forcément être décorrélées.
-Cependant, il existe une corrélation entre les variables <code>Amount</code> et <code>Class</code> qui pourra nous permettre peut-être de faciliter la classification plus tard, pour deviner si une transaction est frauduleuse ou non, vu que le montant d’une transaction peut être un facteur important pour décider si une transaction est frauduleuse ou pas.</p>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Modeles-de-r%C3%A9gression-logistique">Modeles de r&#233;gression logistique<a class="anchor-link" href="#Modeles-de-r%C3%A9gression-logistique">&#182;</a></h1>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="logregr.png" alt="logistic regression"></p>
+                    </div>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>L'algorithme de régression logistique va mesurer la relation entre le "Label" Y et les "Caractéristiques" X en estimant les probabilités à l'aide d'une fonction logistique appelée fonction sigmoid. C’est la fonction représentée sur la première figure et qui a pour but de séparer les transactions frauduleuses de celles non frauduleuses.</p>
+                </div>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>On travaillera tout d'abord sur l'integralite de nos donnees.</p>
+            </div>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Dans tous les modeles suivants, On va séparer notre jeu de données données en 2 groupes : un groupe de training et un groupe de test. et on effectue la regression avec un seuil de décision à 0.5.</p>
+        </div>
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-InputPrompt jp-InputArea-prompt">
+            </div>
+            <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+                <p>Dans notre cas, la classification déséquilibrée est un problème de classification dans lequel une
+                    classe est sous-représentée par rapport aux autres. Le cas classique est un problème à deux classes,
+                    une majoritaire à 99% et une minoritaire à 1%.</p>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1)-Integralite-des-donnees">1) Integralite des donnees<a class="anchor-link" href="#1)-Integralite-des-donnees">&#182;</a></h3>
+            </div>
+        </div>
 
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput  celltag_report_cell">
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-InputPrompt jp-InputArea-prompt">
+            </div>
+        </div>
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-Cell-inputWrapper">
+                <div class="jp-InputPrompt jp-InputArea-prompt">
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput  celltag_report_cell">
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Nombre d'occurences du training set</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+                    <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
 
 
 
 
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>
+
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>La matrice de corrélation nous montre que la corrélation entre les variables V1 à V28 est
+                                très négligeable, ce qui est prévisible puisque ces variables proviennent d’une PCA et
+                                donc les composantes doivent forcément être décorrélées.
+                                Cependant, il existe une corrélation entre les variables <code>Amount</code> et
+                                <code>Class</code> qui pourra nous permettre peut-être de faciliter la classification
+                                plus tard, pour deviner si une transaction est frauduleuse ou non, vu que le montant
+                                d’une transaction peut être un facteur important pour décider si une transaction est
+                                frauduleuse ou pas.</p>
+
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <h1 id="Modeles-de-r%C3%A9gression-logistique">Modeles de r&#233;gression logistique<a
+                                    class="anchor-link" href="#Modeles-de-r%C3%A9gression-logistique">&#182;</a></h1>
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p><img src="logregr.png" alt="logistic regression"></p>
+
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>L'algorithme de régression logistique va mesurer la relation entre le "Label" Y et les
+                                "Caractéristiques" X en estimant les probabilités à l'aide d'une fonction logistique
+                                appelée fonction sigmoid. C’est la fonction représentée sur la première figure et qui a
+                                pour but de séparer les transactions frauduleuses de celles non frauduleuses.</p>
+
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>On travaillera tout d'abord sur l'integralite de nos donnees.</p>
+
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>Dans tous les modeles suivants, On va séparer notre jeu de données données en 2 groupes :
+                                un groupe de training et un groupe de test. et on effectue la regression avec un seuil
+                                de décision à 0.5.</p>
+
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <h3 id="1)-Integralite-des-donnees">1) Integralite des donnees<a class="anchor-link"
+                                    href="#1)-Integralite-des-donnees">&#182;</a></h3>
+
+                        </div>
+                    </div>
+                    <div
+                        class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput  celltag_report_cell">
+
+                    </div>
+                    <div
+                        class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput  celltag_report_cell">
+
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>Nombre d'occurences du training set</p>
+
+                        </div>
+                    </div>
+                    <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+
+                        <div class="jp-Cell-outputWrapper">
+
+
+                            <div class="jp-OutputArea jp-Cell-outputArea">
+
+                                <div class="jp-OutputArea-child">
+
+
+                                    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+                                    <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+                                        <pre>
      0      1 
 181953    323 </pre>
-</div>
+                                    </div>
 
-</div>
+                                </div>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Modele de regression logistique</p>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>Modele de regression logistique</p>
 
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+                        </div>
+                    </div>
+                    <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+                        <div class="jp-Cell-outputWrapper">
 
 
+                            <div class="jp-OutputArea jp-Cell-outputArea">
+
+                                <div class="jp-OutputArea-child">
 
 
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>Confusion Matrix and Statistics
+                                    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+                                    <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+                                        <pre>Confusion Matrix and Statistics
 
           Reference
 Prediction     0     1
@@ -258,93 +311,114 @@ Prediction     0     1
                                           
                Accuracy : 0.9991               
                                           </pre>
-</div>
+                                    </div>
 
-</div>
+                                </div>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>On remarque que l'accuracy de notre modele est de 99,9%. A premiere vue, le modele semble efficace mais dans le cas du déséquilibre de classes, l’exactitude peut être trompeuse. Avec un jeu de données de deux classes, où la première classe représente 99% des données, si le classifieur prédit que chaque exemple appartient à la première classe, l’exactitude sera de 99%, mais ce classifieur est inutile dans la pratique</p>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>On remarque que l'accuracy de notre modele est de 99,9%. A premiere vue, le modele semble
+                                efficace mais dans le cas du déséquilibre de classes, l’exactitude peut être trompeuse.
+                                Avec un jeu de données de deux classes, où la première classe représente 99% des
+                                données, si le classifieur prédit que chaque exemple appartient à la première classe,
+                                l’exactitude sera de 99%, mais ce classifieur est inutile dans la pratique</p>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2)-UpSampling-avec-duplication">2) UpSampling avec duplication<a class="anchor-link" href="#2)-UpSampling-avec-duplication">&#182;</a></h3><p>L'upsampling ou le sur-échantillonnage aléatoire consiste à compléter les données de formation par des copies multiples de certaines d’instances de la classe minoritaire.</p>
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <h3 id="2)-UpSampling-avec-duplication">2) UpSampling avec duplication<a class="anchor-link"
+                                    href="#2)-UpSampling-avec-duplication">&#182;</a></h3>
+                            <p>L'upsampling ou le sur-échantillonnage aléatoire consiste à compléter les données de
+                                formation par des copies multiples de certaines d’instances de la classe minoritaire.
+                            </p>
 
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput  celltag_report_cell">
+                        </div>
+                    </div>
+                    <div
+                        class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput  celltag_report_cell">
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+                    </div>
+                    <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+                        <div class="jp-Cell-outputWrapper">
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;Occurence des fraudes&#34;
+                            <div class="jp-OutputArea jp-Cell-outputArea">
+
+                                <div class="jp-OutputArea-child">
+
+
+                                    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+                                    <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+                                        <pre>[1] &#34;Occurence des fraudes&#34;
 </pre>
-</div>
-</div>
+                                    </div>
+                                </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+                                <div class="jp-OutputArea-child">
 
 
+                                    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>
+
+
+                                    <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+                                        <pre>
      0      1 
 284315 284315 </pre>
-</div>
+                                    </div>
 
-</div>
+                                </div>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>On voit bien que nos données sont devenus équilibrées apres avoir ajouté plusieurs copies des transactions frauduleuses.</p>
-<p>On effectue alors la regression logistique</p>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>On voit bien que nos données sont devenus équilibrées apres avoir ajouté plusieurs copies
+                                des transactions frauduleuses.</p>
+                            <p>On effectue alors la regression logistique</p>
 
-</div>
-</div>
+                        </div>
+                    </div>
 
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+                    <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-
-
-<div class="jp-OutputArea-child">
+                        <div class="jp-Cell-outputWrapper">
 
 
+                            <div class="jp-OutputArea jp-Cell-outputArea">
 
 
 
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>Confusion Matrix and Statistics
+                                <div class="jp-OutputArea-child">
+
+
+
+
+
+                                    <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+                                        <pre>Confusion Matrix and Statistics
 
           Reference
 Prediction     0     1
@@ -354,98 +428,119 @@ Prediction     0     1
       Balanced Accuracy : 0.9501          
                                                   
                                           </pre>
-</div>
+                                    </div>
 
-</div>
+                                </div>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>On obtient une <em>balanced accuracy</em> de 95% , mais avec cette methode on risque d'avoir un overfitting pour les transactions frauduleuses.</p>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>On obtient une <em>balanced accuracy</em> de 95% , mais avec cette methode on risque
+                                d'avoir un overfitting pour les transactions frauduleuses.</p>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="3)Upsamling-with-SMOTE-method">3)Upsamling with SMOTE method<a class="anchor-link" href="#3)Upsamling-with-SMOTE-method">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Pour dépasser l'inconvénient imposé par un upsamling normal, la méthode Smote (Synthetic Minority Oversampling Technique) peut être utilisé. L’idée de SMOTE est d’augmenter le rappel pour la classe minoritaire en générant des individus synthétiques sur les segments entre éléments proches de la classe minoritaire.</p>
-<p><img src="smote.png" alt="smote" width="700px"></p>
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <h3 id="3)Upsamling-with-SMOTE-method">3)Upsamling with SMOTE method<a class="anchor-link"
+                                    href="#3)Upsamling-with-SMOTE-method">&#182;</a></h3>
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>Pour dépasser l'inconvénient imposé par un upsamling normal, la méthode Smote (Synthetic
+                                Minority Oversampling Technique) peut être utilisé. L’idée de SMOTE est d’augmenter le
+                                rappel pour la classe minoritaire en générant des individus synthétiques sur les
+                                segments entre éléments proches de la classe minoritaire.</p>
+                            <p><img src="smote.png" alt="smote" width="700px"></p>
 
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput  celltag_report_cell">
+                        </div>
+                    </div>
+                    <div
+                        class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput  celltag_report_cell">
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+                    </div>
+                    <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+                        <div class="jp-Cell-outputWrapper">
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;Occurence des fraudes&#34;
+                            <div class="jp-OutputArea jp-Cell-outputArea">
+
+                                <div class="jp-OutputArea-child">
+
+
+                                    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+                                    <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+                                        <pre>[1] &#34;Occurence des fraudes&#34;
 </pre>
-</div>
-</div>
+                                    </div>
+                                </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+                                <div class="jp-OutputArea-child">
 
 
+                                    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>
+
+
+                                    <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+                                        <pre>
      0      1 
 283884 284376 </pre>
-</div>
+                                    </div>
 
-</div>
+                                </div>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>On voit bien qu'on a generer autant de transactions frauduleuse que celles non frauduleuses.</p>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>On voit bien qu'on a generer autant de transactions frauduleuse que celles non
+                                frauduleuses.</p>
 
-</div>
-</div>
+                        </div>
+                    </div>
 
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+                    <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-
-<div class="jp-OutputArea-child">
-
-    
+                        <div class="jp-Cell-outputWrapper">
 
 
+                            <div class="jp-OutputArea jp-Cell-outputArea">
 
 
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>Confusion Matrix and Statistics
+                                <div class="jp-OutputArea-child">
+
+
+
+
+
+
+                                    <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+                                        <pre>Confusion Matrix and Statistics
 
           Reference
 Prediction     0     1
@@ -455,77 +550,100 @@ Prediction     0     1
       Balanced Accuracy : 0.9511          
                                                 
                                           </pre>
-</div>
+                                    </div>
 
-</div>
+                                </div>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Le modèle de regression est devenu plus efficace avec une balanced accuracy de 95,11%.</p>
-<p>Mais ce modèle peut entrainer des erreurs, surtout que dans le domaine bancaire, on travaille avec des données sensible pour detecter les fraudes. Donc on ne peut pas se permettre de générer des données ( ~240000 transactions frauduleuses) pour modéliser la regression logistique.</p>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>Le modèle de regression est devenu plus efficace avec une balanced accuracy de 95,11%.
+                            </p>
+                            <p>Mais ce modèle peut entrainer des erreurs, surtout que dans le domaine bancaire, on
+                                travaille avec des données sensible pour detecter les fraudes. Donc on ne peut pas se
+                                permettre de générer des données ( ~240000 transactions frauduleuses) pour modéliser la
+                                regression logistique.</p>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4)-Regression-logistique-pond%C3%A9r%C3%A9e">4) Regression logistique pond&#233;r&#233;e<a class="anchor-link" href="#4)-Regression-logistique-pond%C3%A9r%C3%A9e">&#182;</a></h3><p>Dans la plupart des modèles de Machine learning, ils acceptent un paramètre <code>weight</code>. Il sert à appliquer un coût inversement proportionnel au déséquilibre de classe. Visuellement, cela permet de débiaiser le modèle vers la classe minoritaire comme illustré ci-dessous où la frontière de décision d’un SVM à noyau linéaire est translatée vers la classe minoritaire. 
-<img src="w.png" alt="weighted"></p>
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <h3 id="4)-Regression-logistique-pond%C3%A9r%C3%A9e">4) Regression logistique
+                                pond&#233;r&#233;e<a class="anchor-link"
+                                    href="#4)-Regression-logistique-pond%C3%A9r%C3%A9e">&#182;</a></h3>
+                            <p>Dans la plupart des modèles de Machine learning, ils acceptent un paramètre
+                                <code>weight</code>. Il sert à appliquer un coût inversement proportionnel au
+                                déséquilibre de classe. Visuellement, cela permet de débiaiser le modèle vers la classe
+                                minoritaire comme illustré ci-dessous où la frontière de décision d’un SVM à noyau
+                                linéaire est translatée vers la classe minoritaire.
+                                <img src="w.png" alt="weighted">
+                            </p>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Dans notre cas, on prend notre poids comme le quotient de la somme des transactions non frauduleuses sur la somme des transactions frauduleuses. On obtient:</p>
+                        </div>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>Dans notre cas, on prend notre poids comme le quotient de la somme des transactions non
+                                frauduleuses sur la somme des transactions frauduleuses. On obtient:</p>
 
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+                        </div>
+                    </div>
+                    <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>weight= 577 </pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
+                        <div class="jp-Cell-outputWrapper">
 
 
+                            <div class="jp-OutputArea jp-Cell-outputArea">
 
-<div class="jp-OutputArea-child">
-
-    
-    
+                                <div class="jp-OutputArea-child">
 
 
+                                    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>Confusion Matrix and Statistics
+                                    <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+                                        <pre>weight= 577 </pre>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_report_cell">
+
+                        <div class="jp-Cell-outputWrapper">
+
+
+                            <div class="jp-OutputArea jp-Cell-outputArea">
+
+
+
+                                <div class="jp-OutputArea-child">
+
+
+
+
+
+
+
+                                    <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+                                        <pre>Confusion Matrix and Statistics
 
           Reference
 Prediction     0     1
@@ -535,25 +653,28 @@ Prediction     0     1
                Accuracy : 1          
                  95% CI : (0.9999, 1)         
                                      </pre>
-</div>
+                                    </div>
 
-</div>
+                                </div>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div>
-<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Apres entrainenment, on voit qu’on a obtenu une précision de 100%, la méthode de régression logistique pondérée est efficace et plus adaptée a notre problème!</p>
+                    </div>
+                    <div class="jp-Cell-inputWrapper">
+                        <div class="jp-InputPrompt jp-InputArea-prompt">
+                        </div>
+                        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput "
+                            data-mime-type="text/markdown">
+                            <p>Apres entrainenment, on voit qu’on a obtenu une précision de 100%, la méthode de
+                                régression logistique pondérée est efficace et plus adaptée a notre problème!</p>
 
-</div>
-</div>
+                        </div>
+                    </div>
 
 
-</article>
+    </article>
 </div>
 
 
@@ -563,13 +684,15 @@ Prediction     0     1
             <li><a href=#>DÉTECTION DE FRAUDES DANS LES CARTES BANCAIRES</a></li>
             <li><a href=#Problematique:>PROBLEMATIQUE</a></li>
             <li><a href=#Analyse-statistique-des-données>ANALYSE STATISTIQUE DES DONNÉES</a></li>
-            
+
             <li><a href=#Modeles-de-régression-logistique>MODELES DE RÉGRESSION LOGISTIQUE</a>
-            <ol>
-                <li><a href=#1)-Integralite-des-donnees>INTEGRALITE DES DONNEES</a></li>
-                <li><a href=#2)-UpSampling-avec-duplication>UPSAMPLING AVEC DUPLICATION</a></li>
-                <li><a href=#3)-UpSampling-with-SMOTE-method>UPSAMLING WITH SMOTE METHOD</a></li>
-                <li><a href=#4)-Regression-logistique-pondérée>REGRESSION LOGISTIQUE PONDÉRÉE</a></li>
-            </ol></li>
+                <ol>
+                    <li><a href=#1)-Integralite-des-donnees>INTEGRALITE DES DONNEES</a></li>
+                    <li><a href=#2)-UpSampling-avec-duplication>UPSAMPLING AVEC DUPLICATION</a></li>
+                    <li><a href=#3)-UpSampling-with-SMOTE-method>UPSAMLING WITH SMOTE METHOD</a></li>
+                    <li><a href=#4)-Regression-logistique-pondérée>REGRESSION LOGISTIQUE PONDÉRÉE</a></li>
+                </ol>
+            </li>
         </ul>
     </section>
+</section>
