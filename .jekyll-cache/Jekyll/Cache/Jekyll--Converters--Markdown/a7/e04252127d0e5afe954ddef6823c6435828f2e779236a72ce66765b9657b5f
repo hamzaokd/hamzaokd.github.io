@@ -1,4 +1,4 @@
-I"U<h1 id="detection-of-offsides-in-football"><a href="https://github.com/hamzaokd/Offside_detection">Detection of offsides in football</a></h1>
+I"‚<h1 id="detection-of-offsides-in-football"><a href="https://github.com/hamzaokd/Offside_detection">Detection of offsides in football</a></h1>
 
 <p><em>Personal project still in developemnt, still working on pages layout and functionalities.</em></p>
 
@@ -39,7 +39,7 @@
 <ol>
   <li>Download the repository</li>
   <li>Download the weight file, this is essential for the program to work <a href="https://pjreddie.com/media/files/yolov3.weights">link here</a>. Itâ€™s from the famous <a href="https://pjreddie.com/darknet/yolo/">YOLO project</a>.</li>
-  <li>Run the command file <code>run.cmd</code> and open the browser.</li>
+  <li>Run the command file <code class="language-plaintext highlighter-rouge">run.cmd</code> and open the browser.</li>
   <li>Further instructions on the web page when launching the program</li>
 </ol>
 

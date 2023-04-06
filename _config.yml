@@ -1,3 +1,12 @@
 name: Hamza Oukaddi
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+plugins:
+  - jekyll-polyglot
+languages: ["en", "fr"]
+default_lang: "en"
+exclude_from_localization: ["assets/css", "assets/img"]
+parallel_localization: false
+
+sass:
+  sourcemap: never
